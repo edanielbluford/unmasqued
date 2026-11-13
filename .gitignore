@@ -1,0 +1,27 @@
+# Dependencies
+**/node_modules/
+**/.pnp.*
+
+# Build and test output
+**/dist/
+**/storybook-static/
+**/coverage/
+**/test-results/
+**/playwright-report/
+**/out-tsc/
+**/.angular/
+**/.cache/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Logs and temporary files
+*.log
+*.swp
+*.swo
+
+# Operating system files
+.DS_Store
+Thumbs.db
