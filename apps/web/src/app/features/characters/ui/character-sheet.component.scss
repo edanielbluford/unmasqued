@@ -1,0 +1,316 @@
+:host {
+  display: block;
+}
+
+.sheet {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  background: var(--surface);
+}
+
+.sheet-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+.eyebrow {
+  margin: 0 0 0.45rem;
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin-bottom: 0.4rem;
+  font-size: clamp(2rem, 6vw, 3rem);
+  line-height: 1.05;
+}
+
+.concept {
+  margin: 0;
+}
+
+.status {
+  flex: 0 0 auto;
+  padding: 0.4rem 0.7rem;
+  border: 1px solid #d5e5dc;
+  border-radius: 999px;
+  background: #f0f7f2;
+  color: #426d53;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.record-details,
+.identity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 1rem clamp(1.25rem, 4vw, 2rem);
+  border-block: 1px solid var(--line);
+  background: #faf9f6;
+}
+
+.record-details dt,
+.identity-grid dt,
+.virtues dt {
+  margin-bottom: 0.3rem;
+  color: var(--muted);
+  font-size: 0.68rem;
+}
+
+.record-details dd,
+.identity-grid dd,
+.virtues dd {
+  margin: 0;
+  font-weight: 650;
+}
+
+.sheet-section {
+  min-width: 0;
+  padding: 1.5rem clamp(1.25rem, 4vw, 2rem);
+}
+
+.sheet-section + .sheet-section,
+.paired-sections {
+  border-top: 1px solid var(--line);
+}
+
+.paired-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+}
+
+.section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.section-heading .eyebrow {
+  margin-bottom: 0.25rem;
+}
+
+h2 {
+  margin-bottom: 0;
+  font-size: 1.35rem;
+}
+
+.section-total {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
+.track-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 0.75rem;
+}
+
+.track-card,
+.morality-card,
+.list-card,
+.discipline-card {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 0.85rem;
+  background: #fff;
+}
+
+.track-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.track-label {
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.track-value {
+  font-size: 1.2rem;
+}
+
+.track-value span,
+.aura,
+.level {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.track-dots {
+  display: flex;
+  grid-column: 1 / -1;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.dot {
+  width: 0.45rem;
+  height: 0.45rem;
+  flex: 0 0 auto;
+  border: 1px solid #c9c6bf;
+  border-radius: 50%;
+}
+
+.dot.filled {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.morality-card {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+  align-items: center;
+  gap: 1rem;
+  background: #faf9f6;
+}
+
+.morality-path {
+  display: grid;
+  justify-items: start;
+  gap: 0.4rem;
+}
+
+.virtues {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
+  margin: 0;
+}
+
+.trait-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 0.75rem;
+}
+
+.list-card h3,
+.discipline-card h3,
+.sub-list h3 {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin: 0 0 0.7rem;
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 750;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.list-card h3 span {
+  letter-spacing: 0;
+}
+
+.rated-row {
+  display: flex;
+  min-width: 0;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.6rem;
+  font-size: 0.8rem;
+}
+
+.rated-row + .rated-row {
+  margin-top: 0.55rem;
+}
+
+.dot-rating {
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 0.18rem;
+}
+
+.dot-rating .dot {
+  width: 0.38rem;
+  height: 0.38rem;
+}
+
+.item-rating {
+  flex: 0 0 auto;
+  font-size: 0.74rem;
+  font-weight: 750;
+}
+
+.empty-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-style: italic;
+}
+
+.discipline-list {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.discipline-card {
+  background: #faf9f6;
+}
+
+.discipline-card h3 {
+  color: #715c3c;
+}
+
+.sub-list {
+  margin-top: 1rem;
+}
+
+.sub-list ul,
+.plain-list {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.8rem;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 0.75rem;
+}
+
+.notes {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.history-table {
+  overflow-x: auto;
+}
+
+.history-row {
+  display: grid;
+  grid-template-columns: minmax(8rem, 0.8fr) minmax(4rem, 0.35fr) minmax(9rem, 1.5fr);
+  gap: 0.75rem;
+  padding: 0.7rem 0.4rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.78rem;
+}
+
+.history-header {
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}

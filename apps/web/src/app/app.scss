@@ -1,0 +1,153 @@
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.topbar {
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  display: flex;
+  height: 4.5rem;
+  align-items: center;
+  gap: clamp(1rem, 4vw, 3rem);
+  padding: 0 clamp(1rem, 5vw, 4rem);
+  border-bottom: 1px solid var(--line);
+  background: rgb(255 255 255 / 94%);
+  backdrop-filter: blur(14px);
+}
+
+.brand {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--ink);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.3rem;
+  font-weight: 650;
+  letter-spacing: -0.035em;
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: grid;
+  width: 1.85rem;
+  height: 1.85rem;
+  place-items: center;
+  border-radius: 0.55rem;
+  background: #292b34;
+  color: #f5f0e5;
+  font-size: 1rem;
+}
+
+.game-context {
+  display: grid;
+  gap: 0.1rem;
+  padding-left: clamp(1rem, 3vw, 2rem);
+  border-left: 1px solid var(--line);
+}
+
+.context-label {
+  color: var(--muted);
+  font-size: 0.58rem;
+  font-weight: 750;
+  letter-spacing: 0.13em;
+}
+
+.game-name {
+  color: var(--ink);
+  font-size: 0.82rem;
+  font-weight: 650;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-left: auto;
+}
+
+.profile-avatar {
+  display: grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  place-items: center;
+  border: 1px solid #e3dccf;
+  border-radius: 50%;
+  background: #f3efe7;
+  color: #685a45;
+  font-size: 0.68rem;
+  font-weight: 750;
+}
+
+.profile-copy {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.profile-copy strong {
+  color: var(--ink);
+  font-size: 0.75rem;
+}
+
+.profile-copy span {
+  color: var(--muted);
+  font-size: 0.66rem;
+}
+
+main {
+  flex: 1;
+}
+
+.demo-notice {
+  display: flex;
+  min-height: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.7rem;
+}
+
+.demo-dot {
+  width: 0.42rem;
+  height: 0.42rem;
+  border-radius: 50%;
+  background: #bb8b51;
+}
+
+@media (max-width: 520px) {
+  .topbar {
+    height: 4rem;
+    gap: 0.8rem;
+    padding-inline: 1rem;
+  }
+
+  .brand {
+    font-size: 1.1rem;
+  }
+
+  .game-context {
+    padding-left: 0.8rem;
+  }
+
+  .game-name {
+    max-width: 7rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .profile-copy {
+    display: none;
+  }
+}

@@ -123,14 +123,22 @@ components when they have useful independent states to review.
 
 ## First implementation slice
 
-1. Set up Angular, routing, linting, type checking, and the shared visual
-   tokens.
-2. Configure Storybook and document the first shared components.
-3. Implement sign-in and game selection against the API.
-4. Implement a browser-accessible character list and read-only character
-   sheet.
-5. Add role-aware administrator views and editing only after the read flow and
-   server authorization are in place.
+The initial browser slice is implemented with synthetic demo data:
+
+- The root route opens the Sable Harbor demo character list.
+- The list links to read-only character sheets at
+  `/games/:gameId/characters/:characterId`.
+- The read-only sheet groups identity, tracks and morality, named positive and
+  negative traits by category, abilities, powers by discipline, and the other
+  sections represented in legacy Grapevine sheets.
+- The reusable character sheet has Storybook entries under
+  `Characters/Character sheet`.
+- Unknown character IDs show a not-found state.
+
+This is a UI prototype only. The demo data service is not authentication,
+authorization, or persistent storage; no API or database is connected. The
+next product step is to agree on the real player and administrator access
+rules, then replace the demo data with an authorized API read flow.
 
 ## Validation
 

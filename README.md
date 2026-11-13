@@ -31,12 +31,12 @@ optional.
 
 ## Current status
 
-The project currently contains an Angular web starter with Storybook
-configured for component documentation. Its generated Angular and Storybook
-examples are scaffolding, not Unmasqued features.
+The project currently contains an Angular web app with a first UI slice:
+a demo character list and read-only character sheets, with the sheet component
+documented in Storybook. The characters are synthetic demo data only.
 
-Authentication, game and character workflows, the API, database, legacy
-import/export, and offline synchronization have not been implemented yet.
+Authentication, authorization, persistent game data, the API, database,
+legacy import/export, and offline synchronization have not been implemented.
 
 ## Repository layout
 
